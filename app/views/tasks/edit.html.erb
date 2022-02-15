@@ -1,0 +1,15 @@
+<h1>Edit task</h1>
+<br>
+<%# creates a form with action: /tasks/id and method: Patch(hidden value) (see routes)%>
+<%= form_for(@task) do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <%= f.label :details %>
+  <%= f.text_field :details %>
+  <%= f.label :completed %>
+  <%= f.check_box :completed %>
+  <%= f.submit %>
+<% end %>
+<br>
+<br>
+<%= link_to "Back to list", tasks_path %>
